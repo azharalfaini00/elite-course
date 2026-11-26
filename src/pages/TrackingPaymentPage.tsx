@@ -183,6 +183,7 @@ export function TrackingPaymentPage() {
         {/* Lookup Card */}
         <form
           onSubmit={handleLookupSubmit}
+          autoComplete="off"
           className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row gap-4 items-end"
         >
           <div className="flex-1 min-w-0">
@@ -191,7 +192,11 @@ export function TrackingPaymentPage() {
             </label>
             <input
               id="track-code"
+              name="tracking_code"
               type="text"
+              autoComplete="off"
+              data-1p-ignore="true"
+              data-lpignore="true"
               value={code}
               onChange={(e) => setCode(e.target.value.toUpperCase())}
               placeholder="Contoh: ELT-2611-A1B2C3"
@@ -206,11 +211,16 @@ export function TrackingPaymentPage() {
             </label>
             <input
               id="track-pin"
+              name="tracking_pin"
               type="password"
+              autoComplete="new-password"
+              data-1p-ignore="true"
+              data-lpignore="true"
               value={pin}
               onChange={(e) => setPin(e.target.value)}
               placeholder="PIN rahasia"
               required
+              maxLength={6}
               className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 font-mono text-sm focus:outline-none focus:border-[#0F766E] focus-visible:ring-2 focus-visible:ring-[#0F766E]/30"
             />
           </div>

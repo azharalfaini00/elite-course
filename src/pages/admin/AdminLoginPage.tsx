@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { AlertCircle, ArrowLeft, Eye, EyeOff, KeyRound, Lock, LogIn, Mail, ShieldCheck } from 'lucide-react';
+import { AlertCircle, ArrowLeft, Eye, EyeOff, Lock, LogIn, Mail, ShieldCheck } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { useSiteData } from '../../contexts/SiteDataContext';
 
@@ -10,8 +10,8 @@ export function AdminLoginPage() {
   const { siteSettings } = useSiteData();
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState('elitecourse935@gmail.com');
-  const [password, setPassword] = useState('eliteadmin2026');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [loginError, setLoginError] = useState<string | null>(null);
 
@@ -44,20 +44,6 @@ export function AdminLoginPage() {
           </h1>
           <p className="text-xs sm:text-sm text-slate-600">
             Portal Manajemen Administrator — Sistem Mandiri (Standalone)
-          </p>
-        </div>
-
-        {/* Credentials Info Badge */}
-        <div className="p-3.5 rounded-xl bg-teal-50/80 border border-teal-200 text-xs text-teal-900 space-y-1">
-          <div className="flex items-center gap-1.5 font-semibold text-[#0F766E]">
-            <KeyRound className="w-3.5 h-3.5" />
-            <span>Kredensial Akses Administrator Resmi</span>
-          </div>
-          <p className="text-slate-600">
-            Email: <strong className="text-slate-800 font-mono">elitecourse935@gmail.com</strong>
-          </p>
-          <p className="text-slate-600">
-            Password Default: <strong className="text-slate-800 font-mono">eliteadmin2026</strong>
           </p>
         </div>
 
