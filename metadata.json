@@ -1,0 +1,6 @@
+{
+  "name": "ELITE Course — English Learning Institute",
+  "description": "Website resmi dan sistem manajemen lembaga kursus bahasa Inggris ELITE Course di Pare, Kediri, Jawa Timur.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

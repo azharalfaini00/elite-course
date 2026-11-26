@@ -1,0 +1,784 @@
+﻿{
+    "siteSettings":  {
+                         "main":  {
+                                      "brandName":  "ELITE COURSE",
+                                      "instituteFullName":  "ELITE â€” English Learning Institute",
+                                      "tagline":  "English Learning Institute Â· Pare, Kediri",
+                                      "logoUrl":  "/uploads/public-media/branding/1795554428607_WhatsApp_Image_2026-11-19_at_10.38.23.jpeg",
+                                      "heroHeadline":  "Kuasai Bahasa Inggris di Era Global Bersama ELITE Course",
+                                      "heroDescription":  "ELITE dibangun berdasarkan pandangan unik tentang keadaan di era serba bahasa Inggris.",
+                                      "heroImageUrl":  "/src/assets/images/hero_elite_campus_1795524909059.jpg",
+                                      "heroImageCaption":  "Ilustrasi suasana pembelajaran kelas (dapat diperbarui melalui Dashboard Admin)",
+                                      "heroPrimaryCtaText":  "Daftar Sekarang",
+                                      "foundedYear":  "2019",
+                                      "fkbPermitNumber":  "378/SR/PI/SK/FKB/II/2022",
+                                      "nibNumber":  "220.6230.1583.22",
+                                      "visionItems":  [
+                                                          "Meningkatkan sikap dan perilaku berakhlak mulia pada peserta didik.",
+                                                          "Mewujudkan lulusan yang cerdas, kompetitif dan memiliki jati diri."
+                                                      ],
+                                      "missionItems":  [
+                                                           "Terwujudnya putra dan putri didik yang beriman dan bertaqwa.",
+                                                           "Menumbuhkan siswa yang lebih aktif, kreatif dan disiplin."
+                                                       ],
+                                      "advantages":  [
+                                                         {
+                                                             "title":  "Lembaga Diakui FKB",
+                                                             "description":  "ELITE berdiri sejak tahun 2019 dan memiliki nomor pendaftaran resmi FKB 378/SR/PI/SK/FKB/II/2022 serta NIB 220.6230.1583.22."
+                                                         },
+                                                         {
+                                                             "title":  "Instruktur Mumpuni",
+                                                             "description":  "Tutor memiliki kemampuan di bidangnya, ramah membimbing peserta, serta menjaga suasana kelas tetap menyenangkan."
+                                                         },
+                                                         {
+                                                             "title":  "Metode Super Asyik",
+                                                             "description":  "Menggunakan metode pembelajaran khas Kampung Inggris dengan pendekatan yang menyenangkan dan mudah dipahami."
+                                                         }
+                                                     ],
+                                      "offlinePriceNote":  "2 minggu (2 kelas)",
+                                      "onlineDescription":  "Target pembelajaran disesuaikan dengan kebutuhan dan level peserta.",
+                                      "address":  "Jl. Aster, No. 02, Desa Tulungrejo, Kecamatan Pare, Kabupaten Kediri.",
+                                      "phone":  "0856-5080-9091",
+                                      "whatsappNumber":  "6285650809091",
+                                      "email":  "Elitekampunginggris@gmail.com",
+                                      "officeHours":  "Seninâ€“Jumat, 08.00â€“17.00 WIB",
+                                      "socialLinks":  [
+
+                                                      ],
+                                      "isActive":  true,
+                                      "id":  "main",
+                                      "updatedAt":  "2026-11-24T21:07:10.588Z",
+                                      "updatedBy":  "system"
+                                  }
+                     },
+    "programs":  [
+                     {
+                         "title":  "SPEAKING STARTER",
+                         "slug":  "speaking-starter",
+                         "category":  "offline",
+                         "shortDescription":  "Program dasar bahasa Inggris untuk membangun kosakata, pengucapan dasar, dan keberanian berbicara sejak hari pertama.",
+                         "fullDescription":  "Program Offline Class tingkat pemula dengan dua level (Pre Basic dan Up Basic) yang memadukan pengenalan kosakata, ekspresi harian, percakapan sekitar lingkungan, hingga grammar dasar.",
+                         "basePrice":  200000,
+                         "priceLabel":  "Rp200.000 / 2 minggu (2 kelas)",
+                         "durationLabel":  "2 minggu (2 kelas)",
+                         "imageUrl":  "/src/assets/images/gallery_speaking_club_1795524909062.jpg",
+                         "isFeatured":  true,
+                         "isDraftIncomplete":  false,
+                         "isActive":  true,
+                         "sortOrder":  1,
+                         "id":  "speaking-starter"
+                     },
+                     {
+                         "title":  "SPEAKING BOOSTER",
+                         "slug":  "speaking-booster",
+                         "category":  "offline",
+                         "shortDescription":  "Melatih kepercayaan diri berkomunikasi aktif dalam kelas kecil maupun besar, diskusi, presentasi, dan menyampaikan opini.",
+                         "fullDescription":  "Program Offline Class tingkat menengah (Pre Inter dan Up Inter) untuk melatih kepercayaan diri berbicara, berbagi pengalaman, beropini, dan menyampaikan solusi dalam bahasa Inggris.",
+                         "basePrice":  200000,
+                         "priceLabel":  "Rp200.000 / 2 minggu (2 kelas)",
+                         "durationLabel":  "2 minggu (2 kelas)",
+                         "imageUrl":  "/src/assets/images/hero_elite_campus_1795524909059.jpg",
+                         "isFeatured":  true,
+                         "isDraftIncomplete":  false,
+                         "isActive":  true,
+                         "sortOrder":  2,
+                         "id":  "speaking-booster"
+                     },
+                     {
+                         "title":  "TED TALK",
+                         "slug":  "ted-talk",
+                         "category":  "offline",
+                         "shortDescription":  "Kelas diskusi kritis, debat, problem solving, dan tantangan speaking 99% bahasa Inggris untuk tingkat lanjutan.",
+                         "fullDescription":  "Program Offline Class tingkat lanjutan (Pre Advance dan Up Advance) yang berfokus pada mempertahankan pendapat, memperluas wawasan, dan membiasakan keberanian berbicara bahasa Inggris secara penuh.",
+                         "basePrice":  150000,
+                         "priceLabel":  "Rp150.000 / 2 minggu",
+                         "durationLabel":  "2 minggu",
+                         "imageUrl":  "/src/assets/images/gallery_public_speaking_1795524910552.jpg",
+                         "isFeatured":  true,
+                         "isDraftIncomplete":  false,
+                         "isActive":  true,
+                         "sortOrder":  3,
+                         "id":  "ted-talk"
+                     },
+                     {
+                         "title":  "PUBLIC SPEAKING",
+                         "slug":  "public-speaking",
+                         "category":  "offline",
+                         "shortDescription":  "Pelatihan berpidato dalam bahasa Inggris serta teknik body language dan penyusunan speeches untuk berbagai agenda.",
+                         "fullDescription":  "Melatih peserta berpidato dalam bahasa Inggris dan menguasai teknik body language serta penyusunan materi pidato untuk beragam keperluan acara.",
+                         "basePrice":  150000,
+                         "priceLabel":  "Rp150.000",
+                         "durationLabel":  "2 minggu (jadwal menunggu konfirmasi admin)",
+                         "imageUrl":  "/src/assets/images/gallery_public_speaking_1795524910552.jpg",
+                         "isFeatured":  true,
+                         "isDraftIncomplete":  false,
+                         "isActive":  true,
+                         "sortOrder":  4,
+                         "id":  "public-speaking"
+                     },
+                     {
+                         "title":  "PTE",
+                         "slug":  "pte",
+                         "category":  "offline",
+                         "shortDescription":  "Program persiapan PTE. Detail level, materi, tujuan, jadwal, tutor, dan durasi sedang menunggu kelengkapan data dari admin.",
+                         "fullDescription":  "Program PTE tercantum dengan biaya Rp1.050.000. Detail kurikulum, jadwal, dan tutor akan diaktifkan setelah dilengkapi oleh admin ELITE Course.",
+                         "basePrice":  1850000,
+                         "priceLabel":  "Rp1.050.000",
+                         "durationLabel":  "20x Pertemuan",
+                         "isFeatured":  false,
+                         "isDraftIncomplete":  false,
+                         "isActive":  true,
+                         "sortOrder":  5,
+                         "id":  "pte-offline",
+                         "meetingCount":  0,
+                         "durationPerMeetingMinutes":  0,
+                         "tutorCount":  1,
+                         "studentCapacity":  1,
+                         "unitBillingMode":  "per_student",
+                         "certificateIncluded":  false,
+                         "imageUrl":  "",
+                         "updatedAt":  "2026-11-24T21:20:41.895Z"
+                     },
+                     {
+                         "title":  "Paket 1 â€” 1 Tutor, 1 Murid",
+                         "slug":  "online-paket-1",
+                         "category":  "online",
+                         "shortDescription":  "Kelas privat intensif 1-on-1 secara online. Materi dan jadwal fleksibel sesuai kesepakatan di awal.",
+                         "fullDescription":  "Target pembelajaran disesuaikan dengan kebutuhan dan level peserta. Materi dapat mencakup Grammar, Speaking, Pronunciation, atau materi lain sesuai kebutuhan peserta.",
+                         "basePrice":  550000,
+                         "priceLabel":  "Rp550.000 per siswa",
+                         "durationLabel":  "2 minggu (Seninâ€“Jumat)",
+                         "meetingCount":  10,
+                         "durationPerMeetingMinutes":  60,
+                         "tutorCount":  1,
+                         "studentCapacity":  1,
+                         "unitBillingMode":  "per_student",
+                         "certificateIncluded":  true,
+                         "imageUrl":  "/src/assets/images/gallery_online_mentoring_1795524911618.jpg",
+                         "isFeatured":  true,
+                         "isDraftIncomplete":  false,
+                         "isActive":  true,
+                         "sortOrder":  6,
+                         "id":  "online-paket-1"
+                     },
+                     {
+                         "title":  "Paket 2 â€” 1 Tutor, 2 Murid",
+                         "slug":  "online-paket-2",
+                         "category":  "online",
+                         "shortDescription":  "Kelas semi-privat untuk 2 peserta bersama 1 tutor. Cocok untuk belajar berpasangan dengan materi terarah.",
+                         "fullDescription":  "Target pembelajaran disesuaikan dengan kebutuhan dan level peserta. Materi dapat mencakup Grammar, Speaking, Pronunciation, atau materi lain sesuai kebutuhan peserta.",
+                         "basePrice":  350000,
+                         "priceLabel":  "Rp350.000 per siswa",
+                         "durationLabel":  "2 minggu (Seninâ€“Jumat)",
+                         "meetingCount":  10,
+                         "durationPerMeetingMinutes":  60,
+                         "tutorCount":  1,
+                         "studentCapacity":  2,
+                         "unitBillingMode":  "per_student",
+                         "certificateIncluded":  true,
+                         "imageUrl":  "/src/assets/images/gallery_online_mentoring_1795524911618.jpg",
+                         "isFeatured":  false,
+                         "isDraftIncomplete":  false,
+                         "isActive":  true,
+                         "sortOrder":  7,
+                         "id":  "online-paket-2"
+                     },
+                     {
+                         "title":  "Paket 3 â€” 1 Tutor, 3 Murid",
+                         "slug":  "online-paket-3",
+                         "category":  "online",
+                         "shortDescription":  "Kelas kelompok kecil berisi 3 peserta bersama 1 tutor. 10 kali pertemuan berdurasi 60 menit.",
+                         "fullDescription":  "Target pembelajaran disesuaikan dengan kebutuhan dan level peserta. Satuan biaya paket ini (per siswa / per paket) dapat dikonfirmasi dan diubah oleh admin.",
+                         "basePrice":  300000,
+                         "priceLabel":  "Rp300.000 (satuan biaya diatur admin)",
+                         "durationLabel":  "2 minggu (Seninâ€“Jumat)",
+                         "meetingCount":  10,
+                         "durationPerMeetingMinutes":  60,
+                         "tutorCount":  1,
+                         "studentCapacity":  3,
+                         "unitBillingMode":  "unconfirmed",
+                         "certificateIncluded":  true,
+                         "imageUrl":  "/src/assets/images/gallery_online_mentoring_1795524911618.jpg",
+                         "isFeatured":  false,
+                         "isDraftIncomplete":  false,
+                         "isActive":  true,
+                         "sortOrder":  8,
+                         "id":  "online-paket-3"
+                     },
+                     {
+                         "title":  "Paket 4 â€” 1 Tutor, 4 Murid",
+                         "slug":  "online-paket-4",
+                         "category":  "online",
+                         "shortDescription":  "Kelas kelompok 4 peserta bersama 1 tutor selama 2 minggu (Seninâ€“Jumat). Mendapatkan sertifikat bahasa Inggris.",
+                         "fullDescription":  "Target pembelajaran disesuaikan dengan kebutuhan dan level peserta. Materi dapat mencakup Grammar, Speaking, Pronunciation, atau materi lain sesuai kebutuhan peserta.",
+                         "basePrice":  250000,
+                         "priceLabel":  "Rp250.000 per siswa",
+                         "durationLabel":  "2 minggu (Seninâ€“Jumat)",
+                         "meetingCount":  10,
+                         "durationPerMeetingMinutes":  60,
+                         "tutorCount":  1,
+                         "studentCapacity":  4,
+                         "unitBillingMode":  "per_student",
+                         "certificateIncluded":  true,
+                         "imageUrl":  "/src/assets/images/gallery_online_mentoring_1795524911618.jpg",
+                         "isFeatured":  false,
+                         "isDraftIncomplete":  false,
+                         "isActive":  true,
+                         "sortOrder":  9,
+                         "id":  "online-paket-4"
+                     }
+                 ],
+    "programLevels":  [
+                          {
+                              "programId":  "speaking-starter",
+                              "name":  "Pre Basic",
+                              "materialsSummary":  "ABCs, vocabulary, hobbies, kalimat sederhana, angka, bulan, jam, presentasi sangat sederhana, lagu, dan pengenalan grammar dasar.",
+                              "targetGoal":  "Memberi pengenalan kepada pemula tentang bahasa Inggris dalam bentuk tulisan, video, dan audio.",
+                              "scheduleSlot1":  "07.00â€“08.30",
+                              "tutorSlot1":  "Bro. A",
+                              "scheduleSlot2":  "08.30â€“10.00",
+                              "tutorSlot2":  "Mr. B",
+                              "price":  200000,
+                              "durationLabel":  "2 minggu (2 kelas)",
+                              "isActive":  true,
+                              "sortOrder":  1,
+                              "id":  "starter-pre-basic"
+                          },
+                          {
+                              "programId":  "speaking-starter",
+                              "name":  "Up Basic",
+                              "materialsSummary":  "Vocabulary, expressions, percakapan sekitar lingkungan, describing benda dan seseorang, serta penggunaan grammar dari dasar.",
+                              "targetGoal":  "Mendorong siswa untuk segera melakukan percakapan dan membenahi cara pengucapan dasar.",
+                              "scheduleSlot1":  "07.00â€“08.30",
+                              "tutorSlot1":  "Mr. B",
+                              "scheduleSlot2":  "08.30â€“10.00",
+                              "tutorSlot2":  "Bro. A",
+                              "price":  200000,
+                              "durationLabel":  "2 minggu (2 kelas)",
+                              "isActive":  true,
+                              "sortOrder":  2,
+                              "id":  "starter-up-basic"
+                          },
+                          {
+                              "programId":  "speaking-booster",
+                              "name":  "Pre Inter",
+                              "materialsSummary":  "Feeling, cuaca, games, diskusi sederhana, lagu, listening, presentasi, dan materi terkait.",
+                              "targetGoal":  "Melatih siswa percaya diri dalam berkomunikasi baik dalam kelas kecil maupun besar.",
+                              "scheduleSlot1":  "10.00â€“11.30",
+                              "tutorSlot1":  "Bro. A",
+                              "scheduleSlot2":  "13.30â€“15.00",
+                              "tutorSlot2":  "Mr. B",
+                              "price":  200000,
+                              "durationLabel":  "2 minggu (2 kelas)",
+                              "isActive":  true,
+                              "sortOrder":  3,
+                              "id":  "booster-pre-inter"
+                          },
+                          {
+                              "programId":  "speaking-booster",
+                              "name":  "Up Inter",
+                              "materialsSummary":  "Telling experience, opini, pengembangan ide, giving solution, Sign Post, CCU, Jobs, Songs, presentasi, listening, dan materi terkait.",
+                              "targetGoal":  "Melatih siswa untuk beropini dan memperluas wawasan.",
+                              "scheduleSlot1":  "10.00â€“11.30",
+                              "tutorSlot1":  "Mr. B",
+                              "scheduleSlot2":  "13.30â€“15.00",
+                              "tutorSlot2":  "Bro. A",
+                              "price":  200000,
+                              "durationLabel":  "2 minggu (2 kelas)",
+                              "isActive":  true,
+                              "sortOrder":  4,
+                              "id":  "booster-up-inter"
+                          },
+                          {
+                              "programId":  "ted-talk",
+                              "name":  "Pre Advance",
+                              "materialsSummary":  "Sharing, solving problem, debates, dating, konservasi, man and woman, song, public speaking, dan materi terkait.",
+                              "targetGoal":  "Melatih siswa mempertahankan pendapat dan memperluas wawasan.",
+                              "scheduleSlot1":  "15.30",
+                              "tutorSlot1":  "Mr. B",
+                              "scheduleSlot2":  "",
+                              "tutorSlot2":  "",
+                              "price":  150000,
+                              "durationLabel":  "2 minggu",
+                              "isActive":  true,
+                              "sortOrder":  5,
+                              "id":  "ted-pre-advance"
+                          },
+                          {
+                              "programId":  "ted-talk",
+                              "name":  "Up Advance",
+                              "materialsSummary":  "Menantang siswa menggunakan 99% bahasa Inggris.",
+                              "targetGoal":  "Membuat kebiasaan berani dan percaya diri untuk speaking.",
+                              "scheduleSlot1":  "15.30",
+                              "tutorSlot1":  "Bro. A",
+                              "scheduleSlot2":  "",
+                              "tutorSlot2":  "",
+                              "price":  150000,
+                              "durationLabel":  "2 minggu",
+                              "isActive":  true,
+                              "sortOrder":  6,
+                              "id":  "ted-up-advance"
+                          },
+                          {
+                              "programId":  "public-speaking",
+                              "name":  "Public Speaking",
+                              "materialsSummary":  "Berpidato dalam bahasa Inggris dan mempelajari teknik seperti body language dan speeches.",
+                              "targetGoal":  "Melatih siswa berpidato dalam berbagai macam agenda.",
+                              "scheduleSlot1":  "",
+                              "tutorSlot1":  "",
+                              "scheduleSlot2":  "",
+                              "tutorSlot2":  "",
+                              "price":  150000,
+                              "durationLabel":  "2 minggu",
+                              "isActive":  true,
+                              "sortOrder":  7,
+                              "id":  "public-speaking-umum"
+                          }
+                      ],
+    "programMaterials":  [
+
+                         ],
+    "registrationPeriods":  [
+                                {
+                                    "title":  "Periode Tanggal 10",
+                                    "dayOfMonth":  10,
+                                    "startDate":  "",
+                                    "endDate":  "",
+                                    "registrationCloseDate":  "",
+                                    "quota":  0,
+                                    "enrolledCount":  1,
+                                    "programIds":  [
+
+                                                   ],
+                                    "notes":  "Periode pembelajaran dimulai tanggal 10 setiap bulan (rentang tanggal detail dapat diatur admin).",
+                                    "isOpen":  true,
+                                    "isActive":  true,
+                                    "id":  "periode-tgl-10",
+                                    "updatedAt":  "2026-11-24T18:44:26.933Z"
+                                },
+                                {
+                                    "title":  "Periode Tanggal 25",
+                                    "dayOfMonth":  25,
+                                    "startDate":  "",
+                                    "endDate":  "",
+                                    "registrationCloseDate":  "",
+                                    "quota":  0,
+                                    "enrolledCount":  0,
+                                    "programIds":  [
+
+                                                   ],
+                                    "notes":  "Periode pembelajaran dimulai tanggal 25 setiap bulan (rentang tanggal detail dapat diatur admin).",
+                                    "isOpen":  true,
+                                    "isActive":  true,
+                                    "id":  "periode-tgl-25"
+                                }
+                            ],
+    "discounts":  [
+                      {
+                          "createdAt":  "2026-11-24T21:23:56.365Z",
+                          "name":  "Kemerdekaan",
+                          "code":  "",
+                          "applicableProgramIds":  [
+                                                       "pte-offline"
+                                                   ],
+                          "discountType":  "fixed",
+                          "value":  850000,
+                          "startDate":  "2026-11-24",
+                          "endDate":  "2026-12-24",
+                          "isActive":  true,
+                          "id":  "disc_1795555436330",
+                          "updatedAt":  "2026-11-24T21:23:56.365Z"
+                      }
+                  ],
+    "paymentMethods":  [
+                           {
+                               "id":  "pm_bca",
+                               "category":  "BCA",
+                               "bankOrWalletName":  "Bank Central Asia",
+                               "accountNumber":  "1400012345678",
+                               "accountHolderName":  "ELITE COURSE KEDIRI",
+                               "instructions":  "Transfer via ATM atau BCA Mobile, lalu simpan struk/tangkapan layar bukti transfer.",
+                               "logoUrl":  "",
+                               "qrImageUrl":  "",
+                               "isActive":  true,
+                               "sortOrder":  1
+                           },
+                           {
+                               "id":  "pm_bni",
+                               "category":  "BNI",
+                               "bankOrWalletName":  "Bank Negara Indonesia",
+                               "accountNumber":  "085650809091",
+                               "accountHolderName":  "ELITE COURSE KEDIRI",
+                               "instructions":  "Transfer via ATM, BNI Mobile, atau SMS Banking. Masukkan nomor referensi bila ada.",
+                               "logoUrl":  "",
+                               "qrImageUrl":  "",
+                               "isActive":  true,
+                               "sortOrder":  2
+                           },
+                           {
+                               "id":  "pm_bri",
+                               "category":  "BRI",
+                               "bankOrWalletName":  "Bank Rakyat Indonesia",
+                               "accountNumber":  "315201009876532",
+                               "accountHolderName":  "ELITE COURSE KEDIRI",
+                               "instructions":  "Transfer via BRImo atau ATM BRI terdekat.",
+                               "logoUrl":  "",
+                               "qrImageUrl":  "",
+                               "isActive":  true,
+                               "sortOrder":  3
+                           },
+                           {
+                               "id":  "pm_mandiri",
+                               "category":  "Mandiri",
+                               "bankOrWalletName":  "Bank Mandiri",
+                               "accountNumber":  "1710009876543",
+                               "accountHolderName":  "ELITE COURSE KEDIRI",
+                               "instructions":  "Transfer melalui Livin by Mandiri atau ATM Mandiri.",
+                               "logoUrl":  "",
+                               "qrImageUrl":  "",
+                               "isActive":  true,
+                               "sortOrder":  4
+                           }
+                       ],
+    "tutors":  [
+                   {
+                       "name":  "Bro. A",
+                       "photoUrl":  "/src/assets/images/tutor_portrait_1_1795524910149.jpg",
+                       "experience":  "Pengajar Speaking Starter, Speaking Booster, dan TED Talk (detail dapat dilengkapi admin)",
+                       "origin":  "Belum dilengkapi admin",
+                       "bio":  "Mengampu kelas Speaking Starter (Pre Basic \u0026 Up Basic), Speaking Booster (Pre Inter \u0026 Up Inter), serta TED Talk (Up Advance).",
+                       "isActive":  true,
+                       "sortOrder":  1,
+                       "id":  "tutor-bro-a"
+                   },
+                   {
+                       "name":  "Mr. B",
+                       "photoUrl":  "",
+                       "experience":  "Pengajar Speaking Starter, Speaking Booster, dan TED Talk (detail dapat dilengkapi admin)",
+                       "origin":  "Belum dilengkapi admin",
+                       "bio":  "Mengampu kelas Speaking Starter (Pre Basic \u0026 Up Basic), Speaking Booster (Pre Inter \u0026 Up Inter), serta TED Talk (Pre Advance).",
+                       "isActive":  true,
+                       "sortOrder":  2,
+                       "id":  "tutor-mr-b"
+                   }
+               ],
+    "certificates":  [
+
+                     ],
+    "galleryItems":  [
+                         {
+                             "title":  "Aktivitas Kelas Speaking",
+                             "description":  "Ilustrasi kegiatan diskusi kelompok kecil dan praktik berbicara aktif di kelas.",
+                             "category":  "Ilustrasi Kelas",
+                             "imageUrl":  "/src/assets/images/gallery_speaking_club_1795524909062.jpg",
+                             "sortOrder":  1,
+                             "isActive":  true,
+                             "id":  "gal-speaking-booster"
+                         },
+                         {
+                             "title":  "Latihan Public Speaking \u0026 Presentasi",
+                             "description":  "Ilustrasi latihan pidato bahasa Inggris, body language, dan penyampaian opini.",
+                             "category":  "Ilustrasi Kelas",
+                             "imageUrl":  "/src/assets/images/gallery_public_speaking_1795524910552.jpg",
+                             "sortOrder":  2,
+                             "isActive":  true,
+                             "id":  "gal-public-speaking"
+                         },
+                         {
+                             "title":  "Sesi Online Class Interaktif",
+                             "description":  "Ilustrasi pembelajaran tatap muka daring dengan materi yang menyesuaikan level peserta.",
+                             "category":  "Ilustrasi Online",
+                             "imageUrl":  "/src/assets/images/gallery_online_mentoring_1795524911618.jpg",
+                             "sortOrder":  3,
+                             "isActive":  true,
+                             "id":  "gal-online-class"
+                         }
+                     ],
+    "faqs":  [
+                 {
+                     "question":  "Di mana lokasi ELITE Course dan bagaimana legalitas lembaganya?",
+                     "answer":  "ELITE (English Learning Institute) berdiri sejak tahun 2019 dan berlokasi di Jl. Aster, No. 02, Desa Tulungrejo, Kecamatan Pare, Kabupaten Kediri. ELITE memiliki No. Ijin FKB: 378/SR/PI/SK/FKB/II/2022 dan NIB: 220.6230.1583.22.",
+                     "category":  "Tentang Lembaga",
+                     "sortOrder":  1,
+                     "isActive":  true,
+                     "id":  "faq-lokasi-legalitas"
+                 },
+                 {
+                     "question":  "Kapan periode pendaftaran kelas di ELITE Course dibuka?",
+                     "answer":  "Periode pendaftaran tersedia setiap tanggal 10 dan tanggal 25 setiap bulan, dengan jadwal dan kuota aktif yang dikelola langsung oleh admin ELITE Course.",
+                     "category":  "Pendaftaran",
+                     "sortOrder":  2,
+                     "isActive":  true,
+                     "id":  "faq-periode"
+                 },
+                 {
+                     "question":  "Bagaimana sistem belajar pada program Online Class?",
+                     "answer":  "Program Online Class berlangsung 10 kali pertemuan (60 menit per pertemuan) selama 2 minggu dari Senin sampai Jumat. Materi menyesuaikan kebutuhan peserta (Grammar, Speaking, Pronunciation, atau materi lain), jadwal disepakati di awal, dan peserta memperoleh sertifikat bahasa Inggris.",
+                     "category":  "Program Online",
+                     "sortOrder":  3,
+                     "isActive":  true,
+                     "id":  "faq-online-class"
+                 },
+                 {
+                     "question":  "Bagaimana cara mengecek status pendaftaran dan konfirmasi pembayaran?",
+                     "answer":  "Setelah mengirim formulir pendaftaran, Anda akan mendapatkan Kode Pendaftaran dan PIN pelacakan rahasia. Gunakan keduanya pada halaman Cek Status \u0026 Pembayaran untuk melihat status terkini dan mengunggah bukti transfer.",
+                     "category":  "Pembayaran",
+                     "sortOrder":  4,
+                     "isActive":  true,
+                     "id":  "faq-cek-status"
+                 }
+             ],
+    "enrollments":  [
+                        {
+                            "createdAt":  "2026-11-24T18:44:26.915Z",
+                            "id":  "enr_1795545866915_90d5f3",
+                            "registrationCode":  "ELT-2611-9934AD",
+                            "trackingKeyHash":  "d64d6161d19f172ec146595f04be24bf8cf2baedd3f15a3b0efa6aaf6b011e32",
+                            "classCategory":  "offline",
+                            "programId":  "speaking-starter",
+                            "programName":  "SPEAKING STARTER",
+                            "levelOrPackageId":  "starter-pre-basic",
+                            "levelOrPackageName":  "Pre Basic",
+                            "periodId":  "periode-tgl-10",
+                            "periodTitle":  "Periode Tanggal 10",
+                            "participantName":  "Budi Pratama",
+                            "whatsappNumber":  "081234567890",
+                            "email":  "budi@example.com",
+                            "basePrice":  200000,
+                            "discountAmount":  0,
+                            "finalPrice":  200000,
+                            "privacyConsentAccepted":  true,
+                            "enrollmentStatus":  "Dikonfirmasi",
+                            "paymentStatus":  "Berhasil",
+                            "adminNote":  "Pembayaran telah terverifikasi.",
+                            "statusHistory":  [
+                                                  {
+                                                      "status":  "Menunggu Pembayaran",
+                                                      "note":  "Pendaftaran berhasil dicatat. Menunggu transfer pembayaran.",
+                                                      "changedBy":  "system",
+                                                      "changedAt":  "2026-11-24T18:44:26.915Z"
+                                                  },
+                                                  {
+                                                      "status":  "Menunggu Verifikasi",
+                                                      "note":  "Bukti transfer diunggah oleh peserta.",
+                                                      "changedBy":  "participant",
+                                                      "changedAt":  "2026-11-24T18:44:27.009Z"
+                                                  },
+                                                  {
+                                                      "status":  "Dikonfirmasi (Berhasil)",
+                                                      "note":  "Pembayaran diverifikasi admin, pendaftaran dikonfirmasi.",
+                                                      "changedBy":  "elitecourse935@gmail.com",
+                                                      "changedAt":  "2026-11-24T18:44:41.347Z"
+                                                  }
+                                              ],
+                            "serverQuoteToken":  "02cb8960d55fdf8afbe40c71087f13ef27b564fad25747f80a75778f9bade51e",
+                            "updatedAt":  "2026-11-24T18:44:41.353Z"
+                        }
+                    ],
+    "payments":  [
+                     {
+                         "createdAt":  "2026-11-24T18:44:27.009Z",
+                         "id":  "pay_1795545867008_da06d4",
+                         "enrollmentId":  "enr_1795545866915_90d5f3",
+                         "registrationCode":  "ELT-2611-9934AD",
+                         "trackingKeyHash":  "d64d6161d19f172ec146595f04be24bf8cf2baedd3f15a3b0efa6aaf6b011e32",
+                         "paymentMethodId":  "pm_bca",
+                         "paymentMethodName":  "BCA - Bank Central Asia",
+                         "senderName":  "Budi Pratama",
+                         "transferTime":  "2026-11-25T10:00:00",
+                         "referenceNumber":  "",
+                         "transferAmount":  200000,
+                         "proofFilePath":  "/uploads/payment-proofs/test-proof.jpg",
+                         "proofFileName":  "test-proof.jpg",
+                         "proofMimeType":  "image/jpeg",
+                         "proofFileSize":  245000,
+                         "status":  "Berhasil",
+                         "rejectionReason":  "",
+                         "verifiedBy":  "elitecourse935@gmail.com",
+                         "verifiedAt":  "2026-11-24T18:44:41.347Z",
+                         "history":  [
+                                         {
+                                             "status":  "Menunggu Verifikasi",
+                                             "note":  "Bukti transfer diunggah oleh peserta.",
+                                             "changedBy":  "participant",
+                                             "changedAt":  "2026-11-24T18:44:27.009Z"
+                                         },
+                                         {
+                                             "status":  "Berhasil",
+                                             "note":  "Pembayaran diverifikasi oleh admin.",
+                                             "changedBy":  "elitecourse935@gmail.com",
+                                             "changedAt":  "2026-11-24T18:44:41.347Z"
+                                         }
+                                     ],
+                         "updatedAt":  "2026-11-24T18:44:41.347Z"
+                     }
+                 ],
+    "trackingRecords":  {
+                            "d64d6161d19f172ec146595f04be24bf8cf2baedd3f15a3b0efa6aaf6b011e32":  {
+                                                                                                     "enrollmentId":  "enr_1795545866915_90d5f3",
+                                                                                                     "registrationCode":  "ELT-2611-9934AD",
+                                                                                                     "participantMaskedName":  "Bu** Pr*****",
+                                                                                                     "classCategory":  "offline",
+                                                                                                     "programName":  "SPEAKING STARTER",
+                                                                                                     "levelOrPackageName":  "Pre Basic",
+                                                                                                     "periodTitle":  "Periode Tanggal 10",
+                                                                                                     "basePrice":  200000,
+                                                                                                     "discountAmount":  0,
+                                                                                                     "finalPrice":  200000,
+                                                                                                     "enrollmentStatus":  "Dikonfirmasi",
+                                                                                                     "paymentStatus":  "Berhasil",
+                                                                                                     "adminNote":  "Pembayaran telah diverifikasi.",
+                                                                                                     "updatedAt":  "2026-11-24T18:44:41.357Z"
+                                                                                                 }
+                        },
+    "activityLogs":  [
+                         {
+                             "id":  "log_1795555436368_y21v3o",
+                             "actorUid":  "admin",
+                             "actorEmail":  "elitecourse935@gmail.com",
+                             "action":  "SAVE_DISCOUNTS",
+                             "entityType":  "discounts",
+                             "entityId":  "disc_1795555436330",
+                             "summary":  "Menyimpan dokumen discounts/disc_1795555436330",
+                             "createdAt":  "2026-11-24T21:23:56.368Z"
+                         },
+                         {
+                             "id":  "log_1795555241913_zfkz2b",
+                             "actorUid":  "admin",
+                             "actorEmail":  "elitecourse935@gmail.com",
+                             "action":  "UPDATE_PROGRAM",
+                             "entityType":  "programs",
+                             "entityId":  "pte-offline",
+                             "summary":  "Memperbarui program PTE",
+                             "createdAt":  "2026-11-24T21:20:41.913Z"
+                         },
+                         {
+                             "id":  "log_1795555241901_9pla1z",
+                             "actorUid":  "admin",
+                             "actorEmail":  "elitecourse935@gmail.com",
+                             "action":  "SAVE_PROGRAMS",
+                             "entityType":  "programs",
+                             "entityId":  "pte-offline",
+                             "summary":  "Menyimpan dokumen programs/pte-offline",
+                             "createdAt":  "2026-11-24T21:20:41.902Z"
+                         },
+                         {
+                             "id":  "log_1795554430609_tsautg",
+                             "actorUid":  "admin",
+                             "actorEmail":  "elitecourse935@gmail.com",
+                             "action":  "UPDATE_SITE_SETTINGS",
+                             "entityType":  "siteSettings",
+                             "entityId":  "main",
+                             "summary":  "Memperbarui konten/pengaturan website ELITE Course.",
+                             "createdAt":  "2026-11-24T21:07:10.609Z"
+                         },
+                         {
+                             "id":  "log_1795554430594_scoldr",
+                             "actorUid":  "admin",
+                             "actorEmail":  "elitecourse935@gmail.com",
+                             "action":  "SAVE_SITESETTINGS",
+                             "entityType":  "siteSettings",
+                             "entityId":  "main",
+                             "summary":  "Menyimpan dokumen siteSettings/main",
+                             "createdAt":  "2026-11-24T21:07:10.594Z"
+                         },
+                         {
+                             "id":  "log_1795547587414_m2x30p",
+                             "actorUid":  "admin",
+                             "actorEmail":  "elitecourse935@gmail.com",
+                             "action":  "ADMIN_LOGIN",
+                             "entityType":  "auth",
+                             "entityId":  "admin_primary",
+                             "summary":  "Admin elitecourse935@gmail.com berhasil login ke dashboard.",
+                             "createdAt":  "2026-11-24T19:13:07.414Z"
+                         },
+                         {
+                             "id":  "log_1795546464500_4jcr40",
+                             "actorUid":  "admin",
+                             "actorEmail":  "elitecourse935@gmail.com",
+                             "action":  "UPDATE_SITE_SETTINGS",
+                             "entityType":  "siteSettings",
+                             "entityId":  "main",
+                             "summary":  "Memperbarui konten/pengaturan website ELITE Course.",
+                             "createdAt":  "2026-11-24T18:54:24.500Z"
+                         },
+                         {
+                             "id":  "log_1795546464479_vr41pq",
+                             "actorUid":  "admin",
+                             "actorEmail":  "elitecourse935@gmail.com",
+                             "action":  "SAVE_SITESETTINGS",
+                             "entityType":  "siteSettings",
+                             "entityId":  "main",
+                             "summary":  "Menyimpan dokumen siteSettings/main",
+                             "createdAt":  "2026-11-24T18:54:24.479Z"
+                         },
+                         {
+                             "id":  "log_1795546373703_uf6i76",
+                             "actorUid":  "admin",
+                             "actorEmail":  "elitecourse935@gmail.com",
+                             "action":  "ADMIN_LOGIN",
+                             "entityType":  "auth",
+                             "entityId":  "admin_primary",
+                             "summary":  "Admin elitecourse935@gmail.com berhasil login ke dashboard.",
+                             "createdAt":  "2026-11-24T18:52:53.710Z"
+                         },
+                         {
+                             "id":  "log_1795545881360_294jqh",
+                             "actorUid":  "admin",
+                             "actorEmail":  "elitecourse935@gmail.com",
+                             "action":  "VERIFY_PAYMENT_BERHASIL",
+                             "entityType":  "payments",
+                             "entityId":  "pay_1795545867008_da06d4",
+                             "summary":  "Admin memverifikasi pembayaran ELT-2611-9934AD: Berhasil",
+                             "createdAt":  "2026-11-24T18:44:41.360Z"
+                         },
+                         {
+                             "id":  "log_1795545881259_dngeag",
+                             "actorUid":  "admin",
+                             "actorEmail":  "elitecourse935@gmail.com",
+                             "action":  "ADMIN_LOGIN",
+                             "entityType":  "auth",
+                             "entityId":  "admin_primary",
+                             "summary":  "Admin elitecourse935@gmail.com berhasil login ke dashboard.",
+                             "createdAt":  "2026-11-24T18:44:41.259Z"
+                         },
+                         {
+                             "id":  "log_1795545696969_1y8me7",
+                             "actorUid":  "admin",
+                             "actorEmail":  "elitecourse935@gmail.com",
+                             "action":  "ADMIN_LOGIN",
+                             "entityType":  "auth",
+                             "entityId":  "admin_primary",
+                             "summary":  "Admin elitecourse935@gmail.com berhasil login ke dashboard.",
+                             "createdAt":  "2026-11-24T18:41:36.969Z"
+                         },
+                         {
+                             "id":  "log_init_1795545677157",
+                             "actorUid":  "system",
+                             "actorEmail":  "system",
+                             "action":  "INITIAL_SEED",
+                             "entityType":  "system",
+                             "entityId":  "init",
+                             "summary":  "Inisialisasi database lokal ELITE Course.",
+                             "createdAt":  "2026-11-24T18:41:17.157Z"
+                         }
+                     ],
+    "admins":  [
+                   {
+                       "id":  "admin_primary",
+                       "email":  "elitecourse935@gmail.com",
+                       "name":  "ELITE Administrator",
+                       "role":  "superadmin",
+                       "passwordHash":  "095c6983879d082c190c13ea1f20769524a5d511def70be2d876f0a0e3ae6a80",
+                       "createdAt":  "2026-11-24T18:41:17.180Z"
+                   },
+                   {
+                       "id":  "admin_backup",
+                       "email":  "alfaazhar30@gmail.com",
+                       "name":  "Owner ELITE Course",
+                       "role":  "superadmin",
+                       "passwordHash":  "095c6983879d082c190c13ea1f20769524a5d511def70be2d876f0a0e3ae6a80",
+                       "createdAt":  "2026-11-24T18:41:17.184Z"
+                   }
+               ]
+}
