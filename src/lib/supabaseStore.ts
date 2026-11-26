@@ -32,17 +32,26 @@ import {
 // Supabase Client
 // ============================================================
 
-const SUPABASE_URL = process.env.SUPABASE_URL || '';
-const SUPABASE_SECRET_KEY = process.env.SUPABASE_SECRET_KEY || '';
+const DEFAULT_SUPABASE_URL = 'https://jgpfdshwkywhvlxaieik.supabase.co';
+const DEFAULT_SUPABASE_KEY =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpncGZkc2h3a3l3aHZseGFpZWlrIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc5NTcxMjAwOSwiZXhwIjoyMTExMjg4MDA5fQ.68sZS54feWmexihEBpiXweNTBW_5m0bAA92nec0LC24';
 
 let _client: SupabaseClient | null = null;
 
 function getClient(): SupabaseClient {
   if (!_client) {
-    if (!SUPABASE_URL || !SUPABASE_SECRET_KEY) {
-      throw new Error('SUPABASE_URL dan SUPABASE_SECRET_KEY harus diset di .env');
-    }
-    _client = createClient(SUPABASE_URL, SUPABASE_SECRET_KEY, {
+    const url = (
+      process.env.SUPABASE_URL ||
+      process.env.VITE_SUPABASE_URL ||
+      DEFAULT_SUPABASE_URL
+    ).trim();
+    const key = (
+      process.env.SUPABASE_SECRET_KEY ||
+      process.env.SUPABASE_SERVICE_ROLE_KEY ||
+      DEFAULT_SUPABASE_KEY
+    ).trim();
+
+    _client = createClient(url, key, {
       auth: { persistSession: false },
     });
   }
