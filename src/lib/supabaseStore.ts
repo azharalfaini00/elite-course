@@ -319,8 +319,26 @@ export class SupabaseDatabase {
   }
 
   // ============================================================
-  // Supabase background sync helpers
+  // Supabase background sync helpers & live refresh
   // ============================================================
+
+  private pendingSyncs: PromiseLike<unknown>[] = [];
+
+  public async flush(): Promise<void> {
+    if (this.pendingSyncs.length > 0) {
+      const current = [...this.pendingSyncs];
+      this.pendingSyncs = [];
+      await Promise.allSettled(current.map((p) => Promise.resolve(p)));
+    }
+  }
+
+  public async refreshAll(): Promise<void> {
+    try {
+      this.cache = await this.loadFromSupabase();
+    } catch (err) {
+      console.error('[SupabaseDB] Refresh error:', err);
+    }
+  }
 
   private syncDoc(collection: string, id: string, docData: Record<string, unknown>): void {
     const table = tableName(collection);
@@ -328,54 +346,64 @@ export class SupabaseDatabase {
     const { id: _id, ...rest } = docData;
     const nowIso = new Date().toISOString();
 
-    sb.from(table)
-      .upsert(
-        { id, data: rest, updated_at: nowIso },
-        { onConflict: 'id' }
-      )
+    const p = sb
+      .from(table)
+      .upsert({ id, data: rest, updated_at: nowIso }, { onConflict: 'id' })
       .then(({ error }) => {
         if (error) console.error(`[SupabaseDB] Sync error (${table}/${id}):`, error.message);
       });
+    this.pendingSyncs.push(p);
   }
 
   private syncDelete(collection: string, id: string): void {
     const table = tableName(collection);
     const sb = getClient();
-    sb.from(table)
+    const p = sb
+      .from(table)
       .delete()
       .eq('id', id)
       .then(({ error }) => {
         if (error) console.error(`[SupabaseDB] Delete error (${table}/${id}):`, error.message);
       });
+    this.pendingSyncs.push(p);
   }
 
   private syncSiteSettings(settings: SiteSettings): void {
     const sb = getClient();
     const { id: _id, ...rest } = settings;
-    sb.from('site_settings')
-      .upsert({ id: 'main', data: { ...rest }, updated_at: new Date().toISOString() }, { onConflict: 'id' })
+    const p = sb
+      .from('site_settings')
+      .upsert(
+        { id: 'main', data: { ...rest }, updated_at: new Date().toISOString() },
+        { onConflict: 'id' }
+      )
       .then(({ error }) => {
         if (error) console.error('[SupabaseDB] Site settings sync error:', error.message);
       });
+    this.pendingSyncs.push(p);
   }
 
   private syncTracking(hash: string, record: TrackingRecord): void {
     const sb = getClient();
-    sb.from('tracking_records')
+    const p = sb
+      .from('tracking_records')
       .upsert({ id: hash, data: record, updated_at: new Date().toISOString() }, { onConflict: 'id' })
       .then(({ error }) => {
         if (error) console.error('[SupabaseDB] Tracking sync error:', error.message);
       });
+    this.pendingSyncs.push(p);
   }
 
   private syncActivityLog(entry: ActivityLog): void {
     const sb = getClient();
     const { id, ...rest } = entry;
-    sb.from('activity_logs')
+    const p = sb
+      .from('activity_logs')
       .insert({ id, data: rest, created_at: entry.createdAt })
       .then(({ error }) => {
         if (error) console.error('[SupabaseDB] Activity log sync error:', error.message);
       });
+    this.pendingSyncs.push(p);
   }
 
   // ============================================================

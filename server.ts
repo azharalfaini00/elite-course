@@ -592,8 +592,9 @@ app.use((_req, res, next) => {
   });
 
   // --- 3. Public Catalog & Pricing ---
-  app.get('/api/catalog', (_req, res) => {
+  app.get('/api/catalog', async (_req, res) => {
     try {
+      await db.refreshAll();
       res.json({
         isSeededInFirestore: true,
         siteSettings: db.getSiteSettings(),
@@ -643,7 +644,7 @@ app.use((_req, res, next) => {
   });
 
   // --- 4. Enrollment Registration ---
-  app.post('/api/enrollments', enrollmentRateLimiter, (req, res) => {
+  app.post('/api/enrollments', enrollmentRateLimiter, async (req, res) => {
     try {
       const body = req.body as Record<string, unknown>;
       const participantName = typeof body.participantName === 'string' ? body.participantName.trim() : '';
@@ -803,6 +804,8 @@ app.use((_req, res, next) => {
         enrolledCount: (period.enrolledCount || 0) + 1,
       });
 
+      await db.flush();
+
       res.status(201).json({
         enrollmentId,
         registrationCode,
@@ -878,7 +881,7 @@ app.use((_req, res, next) => {
   });
 
   // --- 6. Payment Confirmation ---
-  app.post('/api/payments/confirm', paymentRateLimiter, (req, res) => {
+  app.post('/api/payments/confirm', paymentRateLimiter, async (req, res) => {
     try {
       const body = req.body as Record<string, unknown>;
       const registrationCode =
@@ -1005,6 +1008,8 @@ app.use((_req, res, next) => {
         }
       }
 
+      await db.flush();
+
       res.status(201).json({
         paymentId,
         status: 'Menunggu Verifikasi',
@@ -1060,9 +1065,10 @@ app.use((_req, res, next) => {
 
   // --- 8. Admin Protected Endpoints ---
 
-  app.get('/api/admin/all-data', (req, res) => {
+  app.get('/api/admin/all-data', async (req, res) => {
     try {
       verifyAdminBearer(req);
+      await db.refreshAll();
       res.json({
         siteSettings: db.getSiteSettings(),
         programs: db.getCollection('programs'),
@@ -1084,7 +1090,7 @@ app.use((_req, res, next) => {
     }
   });
 
-  app.post('/api/admin/documents/:collection', (req, res) => {
+  app.post('/api/admin/documents/:collection', async (req, res) => {
     try {
       const admin = verifyAdminBearer(req);
       const { collection } = req.params;
@@ -1107,13 +1113,15 @@ app.use((_req, res, next) => {
         summary: `Menyimpan dokumen ${collection}/${docId}`,
       });
 
+      await db.flush();
+
       res.json(saved);
     } catch (err) {
       res.status(403).json({ error: err instanceof Error ? err.message : 'Gagal menyimpan dokumen.' });
     }
   });
 
-  app.delete('/api/admin/documents/:collection/:id', (req, res) => {
+  app.delete('/api/admin/documents/:collection/:id', async (req, res) => {
     try {
       const admin = verifyAdminBearer(req);
       const { collection, id } = req.params;
@@ -1127,13 +1135,15 @@ app.use((_req, res, next) => {
         summary: `Menghapus dokumen ${collection}/${id}`,
       });
 
+      await db.flush();
+
       res.json({ success: deleted });
     } catch (err) {
       res.status(403).json({ error: err instanceof Error ? err.message : 'Gagal menghapus dokumen.' });
     }
   });
 
-  app.post('/api/admin/enrollments/update-tracking', (req, res) => {
+  app.post('/api/admin/enrollments/update-tracking', async (req, res) => {
     try {
       const admin = verifyAdminBearer(req);
       const { enrollmentId, enrollmentStatus, paymentStatus, adminNote } = req.body as {
@@ -1187,6 +1197,8 @@ app.use((_req, res, next) => {
         summary: `Mengubah status ${enr.registrationCode} menjadi ${enrollmentStatus} / ${paymentStatus}.`,
       });
 
+      await db.flush();
+
       res.json({ success: true, enrollment: updatedEnr });
     } catch (err) {
       res.status(403).json({ error: err instanceof Error ? err.message : 'Gagal memperbarui status.' });
@@ -1194,7 +1206,7 @@ app.use((_req, res, next) => {
   });
 
   // --- 6b. Admin Create Offline Walk-in Enrollment ---
-  app.post('/api/admin/enrollments/offline', (req, res) => {
+  app.post('/api/admin/enrollments/offline', async (req, res) => {
     try {
       const admin = verifyAdminBearer(req);
       const body = req.body as Record<string, unknown>;
@@ -1365,6 +1377,8 @@ app.use((_req, res, next) => {
         summary: `Mendaftarkan peserta offline di kantor: ${participantName} (${registrationCode}), status: ${enrollmentStatus}/${paymentStatus}.`,
       });
 
+      await db.flush();
+
       res.status(201).json({
         success: true,
         enrollment: newEnrollment,
@@ -1375,7 +1389,7 @@ app.use((_req, res, next) => {
     }
   });
 
-  app.post('/api/admin/payments/verify', (req, res) => {
+  app.post('/api/admin/payments/verify', async (req, res) => {
     try {
       const admin = verifyAdminBearer(req);
       const { paymentId, decision, reason } = req.body as {
@@ -1465,6 +1479,8 @@ app.use((_req, res, next) => {
         entityId: paymentId,
         summary: `Admin memverifikasi pembayaran ${payment.registrationCode}: ${decision}`,
       });
+
+      await db.flush();
 
       res.json({ success: true, decision });
     } catch (err) {
