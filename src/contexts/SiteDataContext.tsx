@@ -42,42 +42,68 @@ interface SiteDataContextValue {
   reloadCatalog: () => Promise<void>;
 }
 
+const CATALOG_CACHE_KEY = 'elite_public_catalog_cache_v1';
+
+function getCachedCatalog() {
+  if (typeof window === 'undefined') return null;
+  try {
+    const raw = localStorage.getItem(CATALOG_CACHE_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+}
+
 const SiteDataContext = createContext<SiteDataContextValue | undefined>(undefined);
 
 export function SiteDataProvider({ children }: { children: React.ReactNode }) {
-  const [loading, setLoading] = useState(true);
+  const initialCache = getCachedCatalog();
+
+  const [loading, setLoading] = useState(!initialCache);
   const [error, setError] = useState<string | null>(null);
-  const [isSeededInFirestore, setIsSeededInFirestore] = useState(false);
-  const [siteSettings, setSiteSettings] = useState<SiteSettings>({
-    ...INITIAL_SITE_SETTINGS,
-    id: 'main',
-  });
+  const [isSeededInFirestore, setIsSeededInFirestore] = useState(true);
+  const [siteSettings, setSiteSettings] = useState<SiteSettings>(
+    initialCache?.siteSettings || {
+      ...INITIAL_SITE_SETTINGS,
+      id: 'main',
+    }
+  );
   const [programs, setPrograms] = useState<Program[]>(
-    INITIAL_PROGRAMS.map((p) => ({ ...p.data, id: p.id }))
+    initialCache?.programs || INITIAL_PROGRAMS.map((p) => ({ ...p.data, id: p.id }))
   );
   const [programLevels, setProgramLevels] = useState<ProgramLevel[]>(
-    INITIAL_PROGRAM_LEVELS.map((l) => ({ ...l.data, id: l.id }))
+    initialCache?.programLevels || INITIAL_PROGRAM_LEVELS.map((l) => ({ ...l.data, id: l.id }))
   );
-  const [programMaterials, setProgramMaterials] = useState<ProgramMaterial[]>([]);
+  const [programMaterials, setProgramMaterials] = useState<ProgramMaterial[]>(
+    initialCache?.programMaterials || []
+  );
   const [registrationPeriods, setRegistrationPeriods] = useState<RegistrationPeriod[]>(
-    INITIAL_REGISTRATION_PERIODS.map((p) => ({ ...p.data, id: p.id }))
+    initialCache?.registrationPeriods || INITIAL_REGISTRATION_PERIODS.map((p) => ({ ...p.data, id: p.id }))
   );
-  const [discounts, setDiscounts] = useState<Discount[]>([]);
-  const [paymentMethods, setPaymentMethods] = useState<PaymentMethod[]>([]);
+  const [discounts, setDiscounts] = useState<Discount[]>(initialCache?.discounts || []);
+  const [paymentMethods, setPaymentMethods] = useState<PaymentMethod[]>(initialCache?.paymentMethods || []);
   const [tutors, setTutors] = useState<Tutor[]>(
-    INITIAL_TUTORS.map((t) => ({ ...t.data, id: t.id }))
+    initialCache?.tutors || INITIAL_TUTORS.map((t) => ({ ...t.data, id: t.id }))
   );
-  const [certificates, setCertificates] = useState<Certificate[]>([]);
+  const [certificates, setCertificates] = useState<Certificate[]>(initialCache?.certificates || []);
   const [galleryItems, setGalleryItems] = useState<GalleryItem[]>(
-    INITIAL_GALLERY_ITEMS.map((g) => ({ ...g.data, id: g.id }))
+    initialCache?.galleryItems || INITIAL_GALLERY_ITEMS.map((g) => ({ ...g.data, id: g.id }))
   );
-  const [faqs, setFaqs] = useState<FaqItem[]>(INITIAL_FAQS.map((f) => ({ ...f.data, id: f.id })));
+  const [faqs, setFaqs] = useState<FaqItem[]>(
+    initialCache?.faqs || INITIAL_FAQS.map((f) => ({ ...f.data, id: f.id }))
+  );
 
   const reloadCatalog = useCallback(async () => {
-    setLoading(true);
     setError(null);
     try {
       const data = await fetchPublicCatalog();
+      if (typeof window !== 'undefined') {
+        try {
+          localStorage.setItem(CATALOG_CACHE_KEY, JSON.stringify(data));
+        } catch {
+          // ignore quota error
+        }
+      }
       setIsSeededInFirestore(data.isSeededInFirestore);
       setSiteSettings(data.siteSettings);
       setPrograms(data.programs);
